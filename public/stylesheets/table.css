@@ -1,0 +1,40 @@
+.boxTable{
+    width: 100%;
+	padding:20px;
+	color: #fff;
+}
+
+.boxTable table {
+	width: 100%;
+
+}
+
+.boxTable tbody tr {
+	background: #ccc;
+	border: solid 1px #000;
+	color: #000;
+}
+
+.boxTable table th{
+    text-align: center;
+    border: solid 1px black;
+}
+
+.boxTable tbody tr:hover {
+	background: #fff;
+}
+
+.boxTable td {
+	padding: 4px 2px;
+    border: solid 1px #000;
+    text-align: center;
+}
+@media screen and (max-width: 525px) {
+    .boxTable{
+        width: 100%;
+    }
+	.boxTable td {
+		padding: 0px;
+		
+	}
+}

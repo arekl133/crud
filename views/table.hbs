@@ -1,0 +1,35 @@
+<h1>Lista pracowników</h1>
+<div class="boxTable">
+<table>
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Adres</th>
+            <th>Wiek</th>
+            <th>Stanowisko</th>
+            <th>Specjalizacja</th>
+            <th>Opcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Name}}</td>
+            <td>{{this.Surname}}</td>
+            <td>{{this.Adres}}</td>
+            <td>{{this.Age}}</td>
+            <td>{{this.WorkPlace}}</td>
+            <td>{{this.Specialization}}</td>
+            <td>
+               <a href="/form?id={{this._id}}">Edytuj</a>
+               <a href="/form-delete?id={{this._id}}">Usuń</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+</div>
+
+<button class="formUser__button" type="button"> <a href="/form">Dodaj Pracownika</a></button>

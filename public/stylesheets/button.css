@@ -1,0 +1,34 @@
+.formUser__row-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    color: red;
+
+}
+
+.formUser__button {
+  width: 30%;
+  background-color: rgba(10, 175, 252, .8);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+  cursor: pointer;
+  font-size: .9em;
+  color: rgb(0, 0, 0);
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: bold;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  .formUser__button{
+    font-size: .8em;
+
+  }
+}
+

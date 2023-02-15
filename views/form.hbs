@@ -1,0 +1,31 @@
+
+<div class="box">
+    <h3>NOWY PRACOWNIK</h3>
+    <div class="box__info">
+    <form class="formUser" action="/form" method="POST">
+        <div class="formUser__row">
+            <input id='list_name' class="formUser__input" type="text" name='list_name' placeholder="Imię" value="{{list.Name}}"/>
+            <input id='list_surname' name='list_surname' class="formUser__input" type="text" placeholder="Nazwisko" value="{{list.Surname}}"/>
+            <input type="hidden" type="text" name="_id" value="{{list._id}}"/>
+        </div>
+        <div class="formUser__row">
+            <input id="list_adres" name="list_adres" class="formUser__input" type="text" placeholder="Adres" value="{{list.Adres}}"/>
+            <input id="list_age" name="list_age" class="formUser__input" type="number" placeholder="Wiek" value="{{list.Age}}"/>
+        </div>
+        <div class="formUser__row">
+            <input id="list_workplace" name="list_workplace" class="formUser__input" type="text" placeholder="Stanowisko"    value="{{list.WorkPlace}}"/>
+            <input id="list_spec"      name="list_spec"      class="formUser__input" type="text" placeholder="Specjalizacja" value="{{list.Specialization}}"/>
+        </div>
+        <div class="formUser__row-buttons">
+            
+                <button class="formUser__button">Wyczyść</button>
+                <button class="formUser__button" type="submit">Dodaj</button>
+                <button class="formUser__button" type="button"> <a href="/table">Tabela</a></button>
+
+                
+        </div>
+    </form>
+</div>
+    <div class="box__photo">
+            </div>
+</div>
