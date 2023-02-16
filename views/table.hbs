@@ -1,29 +1,29 @@
 <h1>Lista pracowników</h1>
-<div class="boxTable">
-<table>
-    <thead>
-        <tr>
-            <th>Imię</th>
-            <th>Nazwisko</th>
-            <th>Adres</th>
-            <th>Wiek</th>
-            <th>Stanowisko</th>
-            <th>Specjalizacja</th>
-            <th>Opcje</th>
+<div class="box-table">
+<table class="box__table">
+    <thead class="box__table-header">
+        <tr class="box__table-row">
+            <th class="box__row-title">Imię</th>
+            <th class="box__row-title">Nazwisko</th>
+            <th class="box__row-title">Adres</th>
+            <th class="box__row-title">Wiek</th>
+            <th class="box__row-title">Stanowisko</th>
+            <th class="box__row-title">Specjalizacja</th>
+            <th class="box__row-title">Opcje</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="box__table-body">
         {{#each list}}
-        <tr>
-            <td>{{this.Name}}</td>
-            <td>{{this.Surname}}</td>
-            <td>{{this.Adres}}</td>
-            <td>{{this.Age}}</td>
-            <td>{{this.WorkPlace}}</td>
-            <td>{{this.Specialization}}</td>
-            <td>
-               <a href="/form?id={{this._id}}">Edytuj</a>
-               <a href="/form-delete?id={{this._id}}">Usuń</a>
+        <tr class="box__table-row">
+            <td class="box_table-cell">{{this.Name}}</td>
+            <td class="box_table-cell">{{this.Surname}}</td>
+            <td class="box_table-cell">{{this.Adres}}</td>
+            <td class="box_table-cell">{{this.Age}}</td>
+            <td class="box_table-cell">{{this.WorkPlace}}</td>
+            <td class="box_table-cell">{{this.Specialization}}</td>
+            <td class="box_table-cell">
+               <a href="/form?id={{this._id}}">Edit</a>
+               <a href="/form-delete?id={{this._id}}">trash</a>
             </td>
         </tr>
         {{/each}}
@@ -31,5 +31,22 @@
 </table>
 
 </div>
+<button class="box__form-btn" type="button"> <a href="/form">Dodaj Pracownika</a></button>
 
-<button class="formUser__button" type="button"> <a href="/form">Dodaj Pracownika</a></button>
+
+
+{{!-- <table class="table">
+  <tr class="table__row">
+    <th class="table__cell table__cell--header">Nazwa</th>
+    <th class="table__cell table__cell--header">Cena</th>
+  </tr>
+  <tr class="table__row">
+    <td class="table__cell">Produkt 1</td>
+    <td class="table__cell">$10</td>
+  </tr>
+  <tr class="table__row">
+    <td class="table__cell table__cell--highlighted">Produkt 2</td>
+    <td class="table__cell table__cell--centered">$15</td>
+  </tr>
+</table> --}}
+

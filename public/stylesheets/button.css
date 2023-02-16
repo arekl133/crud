@@ -1,4 +1,4 @@
-.formUser__row-buttons{
+.box__form-buttons{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -7,7 +7,7 @@
 
 }
 
-.formUser__button {
+.box__form-btn {
   width: 30%;
   background-color: rgba(10, 175, 252, .8);
   border: 0;
@@ -20,13 +20,10 @@
   padding: 10px 15px;
   text-align: center;
   font-weight: bold;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 @media (max-width: 768px) {
-  .formUser__button{
+  .box__form-btn{
     font-size: .8em;
 
   }

@@ -1,40 +1,52 @@
-.boxTable{
+
+.box-table{
     width: 100%;
 	padding:20px;
 	color: #fff;
+	overflow-x:scroll;
 }
 
-.boxTable table {
+.box__table {
 	width: 100%;
 
 }
 
-.boxTable tbody tr {
+.box__table-row {
 	background: #ccc;
 	border: solid 1px #000;
 	color: #000;
 }
 
-.boxTable table th{
+.box__row-title{
     text-align: center;
     border: solid 1px black;
+	padding: 3px;
 }
 
-.boxTable tbody tr:hover {
+.box__table-row:hover {
 	background: #fff;
 }
 
-.boxTable td {
+.box_table-cell {
 	padding: 4px 2px;
     border: solid 1px #000;
     text-align: center;
 }
+@media screen and (max-width:960px) {
+	.box-table{
+		overflow-x:scroll;
+	}	
+}
+
 @media screen and (max-width: 525px) {
-    .boxTable{
+    .box-table{
         width: 100%;
     }
-	.boxTable td {
-		padding: 0px;
+	.box_table-cell {
+		padding: 5px;
 		
+	}
+	.box__row-title{
+		padding: 10px;
 	}
 }

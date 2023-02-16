@@ -12,6 +12,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "express-bem-bemhtml": "^1.0.1",
+    "font-awesome": "^4.7.0",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "mongodb": "^3.6.3",
