@@ -1,0 +1,49 @@
+.box-table{
+    width: 100%;
+	padding: 20px;
+	color: #fff;
+	overflow-x: scroll;
+	.box__table{
+		width: 100%;
+		@media screen and (max-width:960px){
+			overflow-x: scroll;
+		}
+		@media screen and (max-width: 525px){
+			width: 100%;
+		}
+		.box__table-header{
+			.box__table-row {
+				background: #ccc;
+				border: solid 1px #000;
+				color: #000;
+				.box__row-title{
+					text-align: center;
+					border: solid 1px black;
+					padding: 3px;
+					@media screen and (max-width: 525px){
+						padding: 10px;
+					}
+				}
+			}
+
+		}
+		.box__table-body{
+			.box__table-row {
+				background: $blue;
+				border: solid 1px #000;
+				color: #000;
+				&:hover{
+					background: #fff;
+				}
+				.box_table-cell {
+					padding: 4px 2px;
+					border: solid 1px #000;
+					text-align: center;
+					@media screen and (max-width: 525px){
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
+}
