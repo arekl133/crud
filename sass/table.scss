@@ -1,15 +1,22 @@
 .box-table{
     width: 100%;
+	height: auto;
 	padding: 20px;
-	color: #fff;
-	overflow-x: scroll;
+	color: rgb(255, 10, 10);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media screen and (max-width:565px){
+		overflow-x: scroll;
+	}
 	.box__table{
-		width: 100%;
+		width: 60%;
 		@media screen and (max-width:960px){
-			overflow-x: scroll;
+			width: 100%;
 		}
 		@media screen and (max-width: 525px){
 			width: 100%;
+			
 		}
 		.box__table-header{
 			.box__table-row {
@@ -42,8 +49,37 @@
 					@media screen and (max-width: 525px){
 						padding: 5px;
 					}
+					.box_table-buttons{
+						width: 100%;
+						display: flex;
+						justify-content: space-evenly;
+						align-items: center;
+						.link{
+							.fas{
+								color:black;
+								&:hover{
+									color: $blue;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 	}
+}
+
+.box__form-btn{
+	width: 30%;
+	background-color: $blue;
+	border: 0;
+	border-radius: 4px;
+	box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+	cursor: pointer;
+	font-size: .9em;
+	color: rgb(0, 0, 0);
+	margin: 5px;
+	padding: 10px 15px;
+	text-align: center;
+	font-weight: bold;
 }

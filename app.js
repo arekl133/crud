@@ -4,10 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var sass = require('node-sass-middleware');
 
 var db = require('./db');
 
@@ -25,9 +25,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
-
-
-
 
 app.use(function(req, res, next) {
   req.db = db.client;

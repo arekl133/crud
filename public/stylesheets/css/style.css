@@ -1,15 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Chakra+Petch:ital,wght@1,300&family=Fjalla+One&family=IBM+Plex+Mono:wght@100&display=swap");
+/*
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'IBM Plex Mono', monospace;
+*/
 .box-table {
   width: 100%;
+  height: auto;
   padding: 20px;
-  color: #fff;
-  overflow-x: scroll;
+  color: rgb(255, 10, 10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 565px) {
+  .box-table {
+    overflow-x: scroll;
+  }
 }
 .box-table .box__table {
-  width: 100%;
+  width: 60%;
 }
 @media screen and (max-width: 960px) {
   .box-table .box__table {
-    overflow-x: scroll;
+    width: 100%;
   }
 }
 @media screen and (max-width: 525px) {
@@ -50,10 +65,37 @@
     padding: 5px;
   }
 }
+.box-table .box__table .box__table-body .box__table-row .box_table-cell .box_table-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.box-table .box__table .box__table-body .box__table-row .box_table-cell .box_table-buttons .link .fas {
+  color: black;
+}
+.box-table .box__table .box__table-body .box__table-row .box_table-cell .box_table-buttons .link .fas:hover {
+  color: rgba(10, 175, 252, 0.8);
+}
+
+.box__form-btn {
+  width: 30%;
+  background-color: rgba(10, 175, 252, 0.8);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: bold;
+}
 
 .box-form {
-  width: 80%;
-  height: 80%;
+  width: 50%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +104,7 @@
   position: relative;
   box-shadow: rgba(10, 175, 252, 0.8) 0px 4px 13px 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   .box-form {
     width: 90%;
   }
@@ -107,12 +149,13 @@
 }
 .box-form .box__info .box__form .box__form-row .box__form-input {
   width: 100%;
-  padding: 2px;
+  padding: 5px;
   font-size: 1.2rem;
   border: none;
   border-bottom: 1px solid grey;
   margin: 5px;
   font-weight: bold;
+  font-family: "Chakra Petch";
 }
 .box-form .box__info .box__form .box__form-row .box__form-input ::placeholder {
   opacity: 0.9;
@@ -178,6 +221,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(0, 106, 155, 0.8);
 }
 
 * {

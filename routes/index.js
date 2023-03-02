@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const ObjectId = require('mongodb').ObjectId;
+const { check, validationResult } = require('express-validator');
 
 
 /* GET home page. */
@@ -32,6 +33,7 @@ router.get('/form', async function(req, res, next) {
 
 /* POST team */
 router.post('/form', async function (req, res, next)  {
+  
   try{
     let list = {
       _id: req.body._id ? ObjectId(req.body._id) : undefined,
@@ -54,17 +56,47 @@ router.post('/form', async function (req, res, next)  {
   }
 });
 
+  
+
+
+
+
+
 /* GET teams. */
 router.get('/table', async function(req, res, next) {
+  const pageSize = 3;
+  let sort = parseInt(req.query.sort);
+  sort = sort ? sort : 1;
+  
+  const count = await req.db.db('list')
+      .collection('listtab')
+      .count({});
+   
+  const maxPage = Math.floor(count / pageSize);
+  let page = parseInt(req.query.page);
+  page = page >= 0 ? page : 0;
+  page = page <= maxPage ? page : maxPage;
+  const prevPage = page > 0 ? page -1 : 0;
+  const nextPage = page < maxPage ? page + 1 : maxPage;
   const list = await req.db.db('list')
       .collection('listtab')
       .find({})
-      //.collation({
-      //  locale: 'pl'
-      //})
-      //.sort(['Name', 1])
+      .collation({
+        locale: 'pl'
+      })
+      .sort(['Name', sort])
+      .skip(page * pageSize)
+      .limit(pageSize)
       .toArray();
-  res.render('table', { title: 'praconwnicy', list: list });
+  res.render('table', { 
+    title: 'pracownicy', 
+    list: list, 
+    sort: sort, 
+    page: page,
+    nextPage: nextPage,
+    prevPage: prevPage,
+    count: count
+   });
 });
 
 /* DELETE team */

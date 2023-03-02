@@ -22,8 +22,10 @@
             <td class="box_table-cell">{{this.WorkPlace}}</td>
             <td class="box_table-cell">{{this.Specialization}}</td>
             <td class="box_table-cell">
-               <a href="/form?id={{this._id}}">Edit</a>
-               <a href="/form-delete?id={{this._id}}">trash</a>
+                <div class="box_table-buttons">
+                    <a class="link" href="/form?id={{this._id}}"> <i class="fas fa-user-edit"></i></a>
+                    <a class="link" href="/form-delete?id={{this._id}}"><i class="fas fa-trash"></i></a>
+                </div>
             </td>
         </tr>
         {{/each}}
@@ -32,6 +34,15 @@
 
 </div>
 <button class="box__form-btn" type="button"> <a href="/form">Dodaj Pracownika</a></button>
+<div>
+    <p>Znaleziono {{page}} z {{count}} rekordów</p>
+</div>
+<a href="?sort=1">A-Z</a>
+<a href="?sort=-1">A-Z</a>
+<a href="?sort={{sort}}&page={{prevPage}}">&lt;&lt;</a>
+<a href="?sort={{sort}}&page={{nextPage}}">&gt;&gt;</a>
+
+
 
 
 

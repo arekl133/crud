@@ -1,6 +1,6 @@
 .box-form{
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     border-radius: 10px;
     position: relative;
     box-shadow: rgba(10, 175, 252, .8) 0px 4px 13px 10px;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 968px){
         width: 90%;
     }
     .box__title{
@@ -44,12 +44,13 @@
                 }
                 .box__form-input{
                     width: 100%;
-                    padding: 2px;
+                    padding: 5px;
                     font-size: 1.2rem;
                     border: none;
                     border-bottom: 1px solid grey;
                     margin: 5px;
                     font-weight: bold;
+                    font-family: 'Chakra Petch';
                     ::placeholder {
                         opacity: 0.9;
                         color: grey;

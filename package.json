@@ -7,12 +7,14 @@
     "scss-watch": "sass --no-source-map --watch sass/style.scss public/stylesheets/css/style.css"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.3.0",
     "body-parser": "^1.20.1",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "express-bem-bemhtml": "^1.0.1",
+    "express-validator": "^6.15.0",
     "font-awesome": "^4.7.0",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
