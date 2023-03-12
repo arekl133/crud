@@ -1,3 +1,12 @@
+<section>
+    <form action="/table" method="GET">
+    <label for="">Wyszukaj</label>
+    <input type="text" name="Search"/>
+    <input type="hidden" name="sort" value="{{sort}}"/>
+    <input type="submit" value="Szukaj"/>
+    </form>
+</section>
+
 <h1>Lista pracowników</h1>
 <div class="box-table">
 <table class="box__table">
@@ -38,7 +47,7 @@
     <p>Znaleziono {{page}} z {{count}} rekordów</p>
 </div>
 <a href="?sort=1">A-Z</a>
-<a href="?sort=-1">A-Z</a>
+<a href="?sort=-1">Z-A</a>
 <a href="?sort={{sort}}&page={{prevPage}}">&lt;&lt;</a>
 <a href="?sort={{sort}}&page={{nextPage}}">&gt;&gt;</a>
 

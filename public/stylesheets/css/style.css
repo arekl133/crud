@@ -95,7 +95,7 @@ font-family: 'IBM Plex Mono', monospace;
 
 .box-form {
   width: 50%;
-  height: 50%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +107,7 @@ font-family: 'IBM Plex Mono', monospace;
 @media screen and (max-width: 968px) {
   .box-form {
     width: 90%;
+    height: 90%;
   }
 }
 .box-form .box__title {

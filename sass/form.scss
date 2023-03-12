@@ -1,6 +1,6 @@
 .box-form{
     width: 50%;
-    height: 50%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,7 @@
     box-shadow: rgba(10, 175, 252, .8) 0px 4px 13px 10px;
     @media screen and (max-width: 968px){
         width: 90%;
+        height: 90%;
     }
     .box__title{
         background-color: $blue;

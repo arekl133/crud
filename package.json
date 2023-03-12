@@ -17,6 +17,7 @@
     "express-validator": "^6.15.0",
     "font-awesome": "^4.7.0",
     "hbs": "~4.0.4",
+    "heroku": "^7.69.0",
     "http-errors": "~1.6.3",
     "mongodb": "^3.6.3",
     "morgan": "~1.9.1",
