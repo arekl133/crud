@@ -1,0 +1,22 @@
+.box-search {
+  width: 70%;
+  height: auto;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-search form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.box-search form .search-row {
+  padding: 10px;
+}
+.box-search form .search-row .search-title {
+  font-size: 18px;
+}/*# sourceMappingURL=search.css.map */

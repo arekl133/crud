@@ -1,10 +1,20 @@
-<section>
+<section class="box-search">
     <form action="/table" method="GET">
-    <label for="">Wyszukaj</label>
-    <input type="text" name="Search"/>
-    <input type="hidden" name="sort" value="{{sort}}"/>
-    <input type="submit" value="Szukaj"/>
-    </form>
+    <div class="search-row">
+        <label class="search-title">Wyszukaj w polu:</label>
+        <select name="field">
+            <option value="Name">Imię</option>
+            <option value="Surname">Nazwisko</option>
+            <option value="WorkPlace">Stanowisko</option>
+            <option value="Specialization">Specjalizacja</option>
+        </select>
+    </div> 
+    <div class="search-row"> 
+        
+        <input class="form-input" type="text" id="query" name="query" placeholder="Wprowadź zapytanie...">
+        <input class="button" type="submit" value="Szukaj"/>
+    </div>
+    </form>  
 </section>
 
 <h1>Lista pracowników</h1>
@@ -42,14 +52,17 @@
 </table>
 
 </div>
-<button class="box__form-btn" type="button"> <a href="/form">Dodaj Pracownika</a></button>
 <div>
-    <p>Znaleziono {{page}} z {{count}} rekordów</p>
+    <p>Strona: {{page}} , Liczba Pracowników: {{count}} </p>
 </div>
 <a href="?sort=1">A-Z</a>
 <a href="?sort=-1">Z-A</a>
 <a href="?sort={{sort}}&page={{prevPage}}">&lt;&lt;</a>
 <a href="?sort={{sort}}&page={{nextPage}}">&gt;&gt;</a>
+
+<button class="box__form-btn" type="button"> <a href="/form">Dodaj Pracownika</a></button>
+<button class="box__form-btn" type="button"> <a href="/table">Reset</a></button>
+
 
 
 

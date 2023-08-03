@@ -94,7 +94,7 @@ font-family: 'IBM Plex Mono', monospace;
 }
 
 .box-form {
-  width: 50%;
+  width: 80%;
   height: 70%;
   display: flex;
   justify-content: center;
@@ -234,4 +234,63 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+.box-search {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-search form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.box-search form .search-row {
+  max-width: 50vw;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box-search form .search-row .search-title {
+  font-size: 18px;
+}
+.box-search form .search-row .form-input {
+  width: 50%;
+  padding: 1px;
+  font-size: 0.9rem;
+  border: none;
+  border-bottom: 1px solid grey;
+  margin: 5px;
+  font-weight: bold;
+  font-family: "Chakra Petch";
+}
+.box-search form .search-row .form-input ::placeholder {
+  opacity: 0.9;
+  color: grey;
+  font-size: 1rem;
+}
+.box-search form .search-row .form-input :focus-visible {
+  outline: none;
+}
+.box-search form .search-row .button {
+  width: auto;
+  background-color: rgba(10, 175, 252, 0.8);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: bold;
 }

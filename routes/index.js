@@ -77,14 +77,23 @@ router.get('/table', async function(req, res, next) {
   page = page >= 0 ? page : 0;
   page = page <= maxPage ? page : maxPage;
   const prevPage = page > 0 ? page -1 : 0;
-  const nextPage = page < maxPage ? page + 1 : maxPage;
+  const nextPage = page < maxPage ? page +1 : maxPage;
+
+  let query = req.query.query || '';
+  let field = req.query.field || 'Name'; // Domyślne pole wyszukiwania to 'Name'
+
+  const searchCriteria = {
+    [field]: { $regex: query, $options: 'i' } // Wykorzystanie dynamicznego klucza obiektu
+  };
+
+
   const list = await req.db.db('list')
       .collection('listtab')
-      .find({})
+      .find(searchCriteria) // Użycie zmiennej searchCriteria do wyszukiwania po wybranym polu
       .collation({
         locale: 'pl'
       })
-      .sort(['Name', sort])
+      .sort([field, sort]) // Sortowanie po wybranym polu
       .skip(page * pageSize)
       .limit(pageSize)
       .toArray();
@@ -92,10 +101,11 @@ router.get('/table', async function(req, res, next) {
     title: 'pracownicy', 
     list: list, 
     sort: sort, 
-    page: page,
+    page: page + 1,
     nextPage: nextPage,
     prevPage: prevPage,
-    count: count
+    count: count -1,
+    query: query // Przekazanie wartości parametru 'query' do szablonu, aby zachować wprowadzone zapytanie na stronie
    });
 });
 
@@ -112,4 +122,18 @@ router.get('/form-delete', async function (req, res, next) {
   }
   //next();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports = router;
